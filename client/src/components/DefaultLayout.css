@@ -1,0 +1,25 @@
+
+.footer{
+    width: 100%;
+    height:max-content;
+    background-color: rgb(1, 1, 41);
+    color: rgb(180, 175, 175);
+    
+    text-align: center;
+}
+#footername{
+    color: white;
+}
+.hometitle {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .flex2 {
+    display: flex !important;
+    float: left !important;
+  }
+  #boxTitle{
+      color: rgb(131, 131, 131);
+      text-align: center;
+  }

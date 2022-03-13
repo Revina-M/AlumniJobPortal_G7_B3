@@ -1,0 +1,29 @@
+.log{
+    width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    
+}
+.logl{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(8, 8, 36);
+    color: white;
+}
+#welcome{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    padding: 50%;
+}
+#logTitle{
+    text-align: center;
+    font-family: cursive;
+    color: rgb(129, 124, 124);
+}
+.outerlog{
+   padding-top: 120px;
+    padding-left: 300px;
+    padding-bottom: 200px;
+    z-index: 1;
+    
+}
