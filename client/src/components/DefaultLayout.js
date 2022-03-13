@@ -71,11 +71,6 @@ class DefaultLayout extends React.Component {
             <Menu.Item key="/posted" icon={<CheckOutlined />}>
               <Link to="/posted">Posted Jobs</Link>
             </Menu.Item>
-            <Menu.Item key="/logout" icon={<LogoutOutlined />}>
-              <Link to="/" onClick={this.logout}>
-                Log Out
-              </Link>
-            </Menu.Item>
           </Menu>
         </Sider>
         <Layout className="site-layout">
