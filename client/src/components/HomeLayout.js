@@ -39,7 +39,8 @@ class DefaultLayout extends React.Component {
     navigate("/");
   };
   render() {
-    const user = JSON.parse(localStorage.getItem("userInfo"));
+    // const user = JSON.parse(localStorage.getItem("userInfo"));
+    localStorage.removeItem("userInfo");
     return (
       <Layout>
         <Sider
