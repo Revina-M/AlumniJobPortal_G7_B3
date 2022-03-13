@@ -64,12 +64,12 @@ class DefaultLayout extends React.Component {
             {/* <Menu.Item key="/admindashboard" icon={<HomeOutlined />}>
               <Link to="/admindashboard">Home</Link>
             </Menu.Item> */}
-            <Menu.Item key="/profile" icon={<UserOutlined />}>
+            {/* <Menu.Item key="/profile" icon={<UserOutlined />}>
               <Link to="/profile">Profile</Link>
             </Menu.Item>
             <Menu.Item key="/appliedjobs" icon={<CheckSquareOutlined />}>
               <Link to="/appliedjobs">Applied Jobs</Link>
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="/postjob" icon={<PlusOutlined />}>
               <Link to="/postjob">Post Jobs</Link>
             </Menu.Item>
