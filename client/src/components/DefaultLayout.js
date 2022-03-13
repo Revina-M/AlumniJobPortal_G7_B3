@@ -60,18 +60,7 @@ class DefaultLayout extends React.Component {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={[window.location.pathname]}
-          >
-            {/* <Menu.Item key="/profile" icon={<UserOutlined />}>
-              <Link to="/profile">Profile</Link>
-            </Menu.Item>
-
-            <Menu.Item key="/postjob" icon={<PlusOutlined />}>
-              <Link to="/postjob">Post Jobs</Link>
-            </Menu.Item>
-            <Menu.Item key="/posted" icon={<CheckOutlined />}>
-              <Link to="/posted">Posted Jobs</Link>
-            </Menu.Item> */}
-          </Menu>
+          ></Menu>
         </Sider>
         <Layout className="site-layout">
           <Header

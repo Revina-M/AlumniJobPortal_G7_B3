@@ -61,9 +61,6 @@ class DefaultLayout extends React.Component {
             mode="inline"
             defaultSelectedKeys={[window.location.pathname]}
           >
-            {/* <Menu.Item key="/alumnidashboard" icon={<HomeOutlined />}>
-              <Link to="/alumnidashboard">Home</Link>
-            </Menu.Item> */}
             <Menu.Item key="/profile" icon={<UserOutlined />}>
               <Link to="/profile">Profile</Link>
             </Menu.Item>
