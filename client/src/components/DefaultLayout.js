@@ -1,16 +1,5 @@
 import { Layout, Menu } from "antd";
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  HomeOutlined,
-  CheckSquareOutlined,
-  PlusOutlined,
-  CheckOutlined,
-  LogoutOutlined,
-} from "@ant-design/icons";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Image } from "antd";

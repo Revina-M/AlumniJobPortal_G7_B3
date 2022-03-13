@@ -6,8 +6,6 @@ import { register } from "../redux/actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import Loading from "../components/Loading";
-import ErrorMessage from "../components/ErrorMessage";
 import "./css/Register.css";
 function Register({ navigate }) {
   const [email, setEmail] = useState("");
@@ -72,7 +70,6 @@ function Register({ navigate }) {
                         value={username}
                         onChange={(e) => setName(e.target.value)}
                       />
-                      {/* <Form.Text className="error">{formErrorValues.name}</Form.Text> */}
                     </Form.Group>
 
                     <Form.Group controlId="formBasicEmail">
@@ -82,7 +79,6 @@ function Register({ navigate }) {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
-                      {/* <Form.Text className="error">{formErrorValues.email}</Form.Text> */}
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -92,9 +88,6 @@ function Register({ navigate }) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
-                      {/* <Form.Text className="error">
-                {formErrorValues.password}
-              </Form.Text> */}
                     </Form.Group>
 
                     <Form.Group controlId="confirmPassword">
@@ -104,9 +97,6 @@ function Register({ navigate }) {
                         value={confirmpassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                       />
-                      {/* <Form.Text className="error">
-                {formErrorValues.confirmpassword}
-              </Form.Text> */}
                     </Form.Group>
                     <br></br>
                     <DropdownButton

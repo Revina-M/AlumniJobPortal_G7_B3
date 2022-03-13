@@ -4,8 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllJobs } from "../redux/actions/jobActions";
 import { Row, Col, Button } from "antd";
 import moment from "moment";
-import { Link, useNavigate } from "react-router-dom";
-import { logout } from "../redux/actions/userActions";
+import { Link } from "react-router-dom";
 import "./css/Home.css";
 import banr1 from "../assets/19873.jpg";
 function Home() {
@@ -15,32 +14,12 @@ function Home() {
     dispatch(getAllJobs());
   }, []);
 
-  // const { userInfo } = useSelector((state) => state.userLogin);
-  // const dispatch = useDispatch();
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-
-  // const logoutHandler = () => {
-  //   dispatch(logout());
-  // };
-  // useEffect(() => {}, [userInfo]);
 
   return (
     <div>
       <HomeLayout>
-        {/* <Button
-          type="button"
-          className="btn btn-info"
-          onClick={logoutHandler}
-          variant="info"
-        >
-          LogOut
-        </Button>{" "} */}
-        {/* <button type="button" class="btn btn-info" onClick={logoutHandler}>
-          LogOut
-        </button> */}
-        {/* <Button>LogOut</Button> */}
         <div className="bannerH">
           <img src={banr1} className="bannerHpic"></img>
         </div>
@@ -68,9 +47,6 @@ function Home() {
 
                     <hr />
                     <div className="flex justify-content-between">
-                      {/* <Link to={`/jobs/${job._id}`}>
-                        <Button>View</Button>
-                      </Link> */}
                       <Link to="/login">
                         <Button>View</Button>
                       </Link>

@@ -3,12 +3,7 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  HomeOutlined,
   CheckSquareOutlined,
-  PlusOutlined,
-  CheckOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
 import React from "react";

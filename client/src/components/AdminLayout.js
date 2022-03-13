@@ -2,11 +2,6 @@ import { Layout, Menu } from "antd";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  HomeOutlined,
-  CheckSquareOutlined,
   PlusOutlined,
   CheckOutlined,
   LogoutOutlined,

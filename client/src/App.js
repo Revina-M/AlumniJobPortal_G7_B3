@@ -1,14 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.css";
 import Home from "./pages/Home";
-import { Button } from "antd";
 import JobInfo from "./pages/JobInfo";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppliedJobs from "./pages/AppliedJobs";
 import PostJob from "./pages/PostJob";
 import Profile from "./pages/Profile";
-import { css } from "@emotion/react";
 import FadeLoader from "react-spinners/FadeLoader";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllJobs } from "./redux/actions/jobActions";
@@ -18,7 +15,6 @@ import Register from "./pages/Register";
 import PostedJobs from "./pages/PostedJobs";
 import EditJob from "./pages/EditJob";
 import { getAllUsers } from "./redux/actions/userActions";
-import { Navigate } from "react-router-dom";
 import UserInfo from "./pages/UserInfo";
 import Admindashboard from "./pages/Admindashboard";
 import Alumnidashboard from "./pages/Alumnidashboard";
@@ -74,13 +70,3 @@ function App() {
 }
 
 export default App;
-
-// export function ProtectedRoute({ element }) {
-//   //All the attributes inside <ProtectedRoute> tags such as 'path','exact','element'...
-//   const user = localStorage.getItem("userInfo");
-//   if (!user) {
-//     return <Navigate to="/login" />;
-//   } else {
-//     return element;
-//   }
-// }

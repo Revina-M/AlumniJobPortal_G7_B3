@@ -81,16 +81,6 @@ export const editJob = (values) => async (dispatch, getState) => {
   }
 };
 
-// const {
-//   userLogin: { userInfo },
-// } = getState();
-
-// const config = {
-//   headers: {
-//     Authorization: `Bearer ${userInfo.token}`,
-//   },
-// };
-
 export const applyJob = (job) => async (dispatch, getState) => {
   dispatch({ type: "LOADING", payload: true });
   const user = JSON.parse(localStorage.getItem("userInfo"));

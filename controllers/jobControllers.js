@@ -2,11 +2,8 @@ const Job = require("../models/jobModel");
 const User = require("../models/userModel");
 const asyncHandler = require("express-async-handler");
 const moment = require("moment");
-// const generateToken = require("../utils/generateToken");
 
 const getJobs = asyncHandler(async (req, res) => {
-  // const getJobs =
-  // router.get("/getalljobs", async (req, res) => {
   try {
     const jobs = await Job.find();
     res.send(jobs);
@@ -16,7 +13,6 @@ const getJobs = asyncHandler(async (req, res) => {
 });
 
 const postJobs = asyncHandler(async (req, res) => {
-  // router.post("/postjob", async (req, res) => {
   try {
     const newjob = new Job(req.body);
     await newjob.save();
@@ -27,7 +23,6 @@ const postJobs = asyncHandler(async (req, res) => {
 });
 
 const editJobs = asyncHandler(async (req, res) => {
-  // router.post("/editjob", async (req, res) => {
   try {
     const updatedjob = await Job.findOneAndUpdate(
       { _id: req.body._id },
@@ -40,7 +35,6 @@ const editJobs = asyncHandler(async (req, res) => {
 });
 
 const applyJobs = asyncHandler(async (req, res) => {
-  // router.post("/applyjob", async (req, res) => {
   console.log("Entered Handler");
   const { user, job } = req.body;
   console.log(user);
@@ -75,8 +69,4 @@ const applyJobs = asyncHandler(async (req, res) => {
   }
 });
 
-
-
-
 module.exports = { getJobs, postJobs, editJobs, applyJobs };
-// module.exports = router;

@@ -1,18 +1,10 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import DefaultLayout from "../components/DefaultLayout";
 import { Table, Modal } from "antd";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  EditOutlined,
-  OrderedListOutlined,
-} from "@ant-design/icons";
+import { EditOutlined, OrderedListOutlined } from "@ant-design/icons";
 function PostedJobs() {
   const alljobs = useSelector((state) => state.jobsReducer).jobs;
   const allusers = useSelector((state) => state.userReducers).users;

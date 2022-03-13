@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Modal, Select, Button } from "antd";
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  FilterOutlined,
-} from "@ant-design/icons";
+import { FilterOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { searchJobs, sortJobs } from "../redux/actions/jobActions";
 

@@ -2,11 +2,6 @@ import { Layout, Menu } from "antd";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  HomeOutlined,
-  CheckSquareOutlined,
   PlusOutlined,
   CheckOutlined,
   LogoutOutlined,
@@ -61,13 +56,6 @@ class DefaultLayout extends React.Component {
             mode="inline"
             defaultSelectedKeys={[window.location.pathname]}
           >
-            {/* <Menu.Item key="/employerdashboard" icon={<HomeOutlined />}>
-              <Link to="/employerdashboard">Home</Link>
-            </Menu.Item> */}
-            {/* <Menu.Item key="/profile" icon={<UserOutlined />}>
-              <Link to="/profile">Profile</Link>
-            </Menu.Item> */}
-
             <Menu.Item key="/postjob" icon={<PlusOutlined />}>
               <Link to="/postjob">Post Jobs</Link>
             </Menu.Item>

@@ -15,24 +15,12 @@ function Alumnidashboard() {
     dispatch(getAllJobs());
   }, []);
 
-  // const { userInfo } = useSelector((state) => state.userLogin);
-  // const dispatch = useDispatch();
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
-
-  // const logoutHandler = () => {
-  //   dispatch(logout());
-  // };
-  // useEffect(() => {}, [userInfo]);
 
   return (
     <div>
       <AlumniLayout>
-        {/* <button type="button" class="btn btn-info" onClick={logoutHandler}>
-          LogOut
-        </button> */}
-        {/* <Button>LogOut</Button> */}
         <div className="bannerH">
           <img src={banr1} className="bannerHpic"></img>
         </div>
