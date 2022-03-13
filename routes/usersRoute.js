@@ -12,6 +12,6 @@ const router = express.Router();
 router.route("/register").post(registerUser);
 router.route("/login").post(authUser);
 router.route("/update").post(protect, updateUser);
-router.route("/getallusers").get(protect, getAllUsers);
+router.route("/getallusers").get(getAllUsers);
 
 module.exports = router;
