@@ -46,61 +46,26 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
-          <Route
-            path="/appliedjobs"
-            exact
-            element={<ProtectedRoute element={<AppliedJobs />} />}
-          />
-          <Route
-            path="/postjob"
-            exact
-            element={<ProtectedRoute element={<PostJob />} />}
-          />
-          <Route
-            path="/profile"
-            exact
-            element={<ProtectedRoute element={<Profile />} />}
-          />
+          <Route path="/appliedjobs" exact element={<AppliedJobs />} />
 
-          <Route
-            path="/jobs/:id"
-            exact
-            element={<ProtectedRoute element={<JobInfo />} />}
-          />
-          <Route
-            path="/posted"
-            exact
-            element={<ProtectedRoute element={<PostedJobs />} />}
-          />
-          <Route
-            path="/editjob/:id"
-            exact
-            element={<ProtectedRoute element={<EditJob />} />}
-          />
-          <Route
-            path="/users/:id"
-            exact
-            element={<ProtectedRoute element={<UserInfo />} />}
-          />
-          <Route
-            path="/admindashboard"
-            exact
-            element={<ProtectedRoute element={<Admindashboard />} />}
-          />
-          <Route
-            path="/alumnidashboard"
-            exact
-            element={<ProtectedRoute element={<Alumnidashboard />} />}
-          />
+          <Route path="/postjob" exact element={<PostJob />} />
+
+          <Route path="/profile" exact element={<Profile />} />
+          <Route path="/jobs/:id" exact element={<JobInfo />} />
+          <Route path="/posted" exact element={<PostedJobs />} />
+          <Route path="/editjob/:id" exact element={<EditJob />} />
+          <Route path="/users/:id" exact element={<UserInfo />} />
+          <Route path="/admindashboard" exact element={<Admindashboard />} />
+          <Route path="/alumnidashboard" exact element={<Alumnidashboard />} />
           <Route
             path="/employerdashboard"
             exact
-            element={<ProtectedRoute element={<Employerdashboard />} />}
+            element={<Employerdashboard />}
           />
           <Route
             path="/facultydashboard"
             exact
-            element={<ProtectedRoute element={<Facultydashboard />} />}
+            element={<Facultydashboard />}
           />
         </Routes>
       </div>
@@ -110,12 +75,12 @@ function App() {
 
 export default App;
 
-export function ProtectedRoute({ element }) {
-  //All the attributes inside <ProtectedRoute> tags such as 'path','exact','element'...
-  const user = localStorage.getItem("user");
-  if (!user) {
-    return <Navigate to="/login" />;
-  } else {
-    return element;
-  }
-}
+// export function ProtectedRoute({ element }) {
+//   //All the attributes inside <ProtectedRoute> tags such as 'path','exact','element'...
+//   const user = localStorage.getItem("userInfo");
+//   if (!user) {
+//     return <Navigate to="/login" />;
+//   } else {
+//     return element;
+//   }
+// }
