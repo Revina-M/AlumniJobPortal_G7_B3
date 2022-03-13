@@ -27,152 +27,165 @@ function PostJob() {
   return (
     <div>
       <DefaultLayout>
-        <Tabs defaultActiveKey="0" activeKey={activeTab}>
-          <TabPane tab="Job Info" key="0">
-            <Form layout="vertical" onFinish={onFirstFormFinish}>
-              <Row gutter={16}>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="title"
-                    rules={[{ required: true }]}
-                    label="title"
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="department"
-                    rules={[{ required: true }]}
-                    label="Department"
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="experience"
-                    rules={[{ required: true }]}
-                    label="Experience"
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="salaryFrom"
-                    rules={[{ required: true }]}
-                    label="Salary From"
-                  >
-                    <Input type="number" />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="salaryTo"
-                    rules={[{ required: true }]}
-                    label="Salary To"
-                  >
-                    <Input type="number" />
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="skillsRequired"
-                    rules={[{ required: true }]}
-                    label="Skills"
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="minimumQualification"
-                    rules={[{ required: true }]}
-                    label="Minimum Qualification"
-                  >
-                    <Select>
-                      <Option value="Degree">Degree</Option>
-                      <Option value="Plus Two">Plus Two</Option>
-                      <Option value="10th">10th</Option>
-                    </Select>
-                  </Form.Item>
-                </Col>
-                <Col lg={24} sm={24}>
-                  <Form.Item
-                    name="smallDescription"
-                    rules={[{ required: true }]}
-                    label="Small Description"
-                  >
-                    <TextArea rows={3} />
-                  </Form.Item>
-                </Col>
-                <Col lg={24} sm={24}>
-                  <Form.Item
-                    name="fullDescription"
-                    rules={[{ required: true }]}
-                    label="Full Description"
-                  >
-                    <TextArea rows={3} />
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Button htmlType="submit">Next</Button>
-            </Form>
-          </TabPane>
-          <TabPane tab="Company Info" key="1">
-            <Form layout="vertical" onFinish={onFinalFormFinish}>
-              <Row gutter={16}>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="company"
-                    label="Company Name"
-                    rules={[{ required: true }]}
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="email"
-                    label="Company Email"
-                    rules={[{ required: true }]}
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={8} sm={24}>
-                  <Form.Item
-                    name="phoneNumber"
-                    label="Phone Name"
-                    rules={[{ required: true }]}
-                  >
-                    <Input />
-                  </Form.Item>
-                </Col>
-                <Col lg={24} sm={24}>
-                  <Form.Item
-                    name="companyDescription"
-                    label="Company Description "
-                    rules={[{ required: true }]}
-                  >
-                    <TextArea rows={3} />
-                  </Form.Item>
-                </Col>
-              </Row>
-              <Button
-                onClick={() => {
-                  setActiveTab("0");
-                }}
-              >
-                Previous
-              </Button>
-              <Button htmlType="submit">Post Job</Button>
-            </Form>
-          </TabPane>
-        </Tabs>
+        <div className="outerprofile">
+          <div className="prof">
+            <Row>
+              <Col span={3}>
+                <div className="profL"></div>
+              </Col>
+              <Col span={21}>
+                <div className="profR">
+                  <Tabs defaultActiveKey="0" activeKey={activeTab}>
+                    <TabPane tab="Job Info" key="0">
+                      <Form layout="vertical" onFinish={onFirstFormFinish}>
+                        <Row gutter={16}>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="title"
+                              rules={[{ required: true }]}
+                              label="title"
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="department"
+                              rules={[{ required: true }]}
+                              label="Department"
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="experience"
+                              rules={[{ required: true }]}
+                              label="Experience"
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="salaryFrom"
+                              rules={[{ required: true }]}
+                              label="Salary From"
+                            >
+                              <Input type="number" />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="salaryTo"
+                              rules={[{ required: true }]}
+                              label="Salary To"
+                            >
+                              <Input type="number" />
+                            </Form.Item>
+                          </Col>
+                        </Row>
+                        <Row gutter={16}>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="skillsRequired"
+                              rules={[{ required: true }]}
+                              label="Skills"
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="minimumQualification"
+                              rules={[{ required: true }]}
+                              label="Minimum Qualification"
+                            >
+                              <Select>
+                                <Option value="Degree">Degree</Option>
+                                <Option value="Plus Two">Plus Two</Option>
+                                <Option value="10th">10th</Option>
+                              </Select>
+                            </Form.Item>
+                          </Col>
+                          <Col lg={24} sm={24}>
+                            <Form.Item
+                              name="smallDescription"
+                              rules={[{ required: true }]}
+                              label="Small Description"
+                            >
+                              <TextArea rows={3} />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={24} sm={24}>
+                            <Form.Item
+                              name="fullDescription"
+                              rules={[{ required: true }]}
+                              label="Full Description"
+                            >
+                              <TextArea rows={3} />
+                            </Form.Item>
+                          </Col>
+                        </Row>
+                        <Button htmlType="submit">Next</Button>
+                      </Form>
+                    </TabPane>
+                    <TabPane tab="Company Info" key="1">
+                      <Form layout="vertical" onFinish={onFinalFormFinish}>
+                        <Row gutter={16}>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="company"
+                              label="Company Name"
+                              rules={[{ required: true }]}
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="email"
+                              label="Company Email"
+                              rules={[{ required: true }]}
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={8} sm={24}>
+                            <Form.Item
+                              name="phoneNumber"
+                              label="Phone Name"
+                              rules={[{ required: true }]}
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
+                          <Col lg={24} sm={24}>
+                            <Form.Item
+                              name="companyDescription"
+                              label="Company Description "
+                              rules={[{ required: true }]}
+                            >
+                              <TextArea rows={3} />
+                            </Form.Item>
+                          </Col>
+                        </Row>
+                        <Button
+                          onClick={() => {
+                            setActiveTab("0");
+                          }}
+                        >
+                          Previous
+                        </Button>
+                        <Button htmlType="submit">Post Job</Button>
+                      </Form>
+                    </TabPane>
+                  </Tabs>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </div>
       </DefaultLayout>
     </div>
   );
