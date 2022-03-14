@@ -5,7 +5,7 @@ import { Table } from "antd";
 function AppliedJobs() {
   const { jobs } = useSelector((state) => state.jobsReducer);
 
-  const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("userInfo"));
 
   const userAppliedJobs = [];
 
