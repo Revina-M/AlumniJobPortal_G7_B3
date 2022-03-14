@@ -17,6 +17,7 @@ function Register({ navigate }) {
   const [role, setRole] = useState("");
 
   const [message, setMessage] = useState(null);
+  const [successmessage, setSuccessmessage] = useState(null);
 
   const dispatch = useDispatch();
   navigate = useNavigate();
@@ -43,7 +44,8 @@ function Register({ navigate }) {
     } else if (password !== confirmpassword) {
       setMessage("Passwords do not match");
     } else {
-      setMessage("Registered successfully!");
+      setMessage(null);
+      setSuccessmessage("Registered successfully!");
       dispatch(register(username, email, password, role));
 
       setTimeout(() => {
@@ -85,9 +87,15 @@ function Register({ navigate }) {
                 <h3 id="regtitle">Register</h3>
 
                 <div className="loginContainer">
+                  {successmessage && (
+                    <ErrorMessage variant="success">
+                      {successmessage}
+                    </ErrorMessage>
+                  )}
                   {message && (
                     <ErrorMessage variant="danger">{message}</ErrorMessage>
                   )}
+
                   {loading && <Loading />}
                   <Form onSubmit={submitHandler}>
                     <Form.Group controlId="name">
