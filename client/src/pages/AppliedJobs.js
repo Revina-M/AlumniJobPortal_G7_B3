@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultLayout from "../components/DefaultLayout";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Table } from "antd";
 function AppliedJobs() {
   const { jobs } = useSelector((state) => state.jobsReducer);
@@ -13,7 +13,7 @@ function AppliedJobs() {
     var appliedCandidates = job.appliedCandidates;
 
     var temp = appliedCandidates.find(
-      (candidate) => candidate.userid == user._id
+      (candidate) => candidate.userid === user._id
     );
 
     if (temp) {
