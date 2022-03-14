@@ -45,9 +45,8 @@ function Register({ navigate }) {
       setMessage("Passwords do not match");
     } else {
       setMessage(null);
-      setSuccessmessage("Registered successfully!");
       dispatch(register(username, email, password, role));
-
+      setSuccessmessage("Registered successfully!");
       setTimeout(() => {
         localStorage.removeItem("userInfo");
         window.location.href = "/login";

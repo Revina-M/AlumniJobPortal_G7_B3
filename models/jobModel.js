@@ -16,6 +16,7 @@ const jobschema = new mongoose.Schema(
     email: { type: String, required: true },
     phoneNumber: { type: Number, required: true },
     companyDescription: { type: String, required: true },
+    companyUrl: { type: String, required: true },
     appliedCandidates: { type: [], required: true },
     postedBy: { type: String, required: true },
   },

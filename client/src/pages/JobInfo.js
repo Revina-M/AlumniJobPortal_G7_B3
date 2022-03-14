@@ -68,6 +68,12 @@ function JobInfo() {
                   <b>Company Profile</b> : {job.companyDescription}
                 </p>
                 <p>
+                  <b>Company Website</b> :{" "}
+                  <a href={job.companyUrl} target="_blank">
+                    {job.companyUrl}
+                  </a>
+                </p>
+                <p>
                   <b>Total Candidates applied</b> :{" "}
                   {job.appliedCandidates.length}
                 </p>

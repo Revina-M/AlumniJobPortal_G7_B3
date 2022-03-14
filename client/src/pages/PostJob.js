@@ -169,6 +169,15 @@ function PostJob() {
                               <TextArea rows={3} />
                             </Form.Item>
                           </Col>
+                          <Col lg={24} sm={24}>
+                            <Form.Item
+                              name="companyUrl"
+                              label="Company Website "
+                              rules={[{ required: true }]}
+                            >
+                              <Input />
+                            </Form.Item>
+                          </Col>
                         </Row>
                         <Button
                           onClick={() => {
