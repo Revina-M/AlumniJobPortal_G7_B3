@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import DefaultLayout from "../components/DefaultLayout";
 import { Row, Col, Form, Tabs, Input, Button } from "antd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../redux/actions/userActions";
+import { useParams } from "react-router-dom";
 import "./css/Profile.css";
 const { TextArea } = Input;
 const { TabPane } = Tabs;
@@ -10,6 +11,7 @@ function Profile() {
   const [personalInfo, setPersonalInfo] = useState({});
   const [activeTab, setActiveTab] = useState("1");
   const dispatch = useDispatch();
+  const { id } = useParams();
   function onPersonInfoSubmit(values) {
     setPersonalInfo(values);
     console.log(values);
@@ -21,8 +23,11 @@ function Profile() {
     console.log(finalObj);
     dispatch(updateUser(finalObj));
   }
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  console.log(userInfo._id);
 
-  const user = JSON.parse(localStorage.getItem("userInfo"));
+  const { users } = useSelector((state) => state.userReducers);
+  const user = users.find((user) => user._id === userInfo._id);
   return (
     <div>
       <DefaultLayout>
