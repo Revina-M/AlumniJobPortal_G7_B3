@@ -81,9 +81,8 @@ function Login({ navigate }) {
                       <Form.Group
                         className="mb-3"
                         controlId="formBasicCheckbox"
-                      >
-                        <Form.Check type="checkbox" label="Check me out" />
-                      </Form.Group>
+                      ></Form.Group>
+                      <br></br>
                       <Button variant="primary" type="submit">
                         Submit
                       </Button>

@@ -1,7 +1,7 @@
 import { Layout, Menu } from "antd";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Image } from "antd";
 import Filter from "./Filter";
 
@@ -79,9 +79,9 @@ class DefaultLayout extends React.Component {
               <div
                 style={{ display: this.state.collapsed ? "name" : "inline" }}
               >
-                <h3 className="mr-2">
+                <h4 className="mr-2">
                   <b>{user.username}</b>
-                </h3>
+                </h4>
               </div>
             </div>
             {/* .....*/}

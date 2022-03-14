@@ -14,14 +14,11 @@ function Home() {
     dispatch(getAllJobs());
   }, []);
 
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
-
   return (
     <div>
       <HomeLayout>
         <div className="bannerH">
-          <img src={banr1} className="bannerHpic"></img>
+          <img src={banr1} className="bannerHpic" alt="Jobportal"></img>
         </div>
 
         <div className="homebg">

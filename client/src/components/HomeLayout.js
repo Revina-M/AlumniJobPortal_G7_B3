@@ -38,8 +38,10 @@ class DefaultLayout extends React.Component {
     navigate = useNavigate();
     navigate("/");
   };
-  clear = () => {
+  clear = ({ navigate }) => {
     localStorage.removeItem("userInfo");
+    navigate = useNavigate();
+    navigate("/login");
   };
 
   render() {
