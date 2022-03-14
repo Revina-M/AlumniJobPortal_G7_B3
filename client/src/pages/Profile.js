@@ -24,7 +24,6 @@ function Profile() {
     dispatch(updateUser(finalObj));
   }
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(userInfo._id);
 
   const { users } = useSelector((state) => state.userReducers);
   const user = users.find((user) => user._id === userInfo._id);
