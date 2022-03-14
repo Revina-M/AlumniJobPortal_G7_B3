@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
     mobileNumber: { type: String, default: "" },
     portfolio: { type: String, default: "" },
     about: { type: String, default: "" },
-
+    address: { type: String, default: "" },
     education: { type: [], default: [""] },
     skills: { type: [], default: [""] },
     projects: { type: [], default: [""] },
