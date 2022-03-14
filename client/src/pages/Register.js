@@ -6,6 +6,8 @@ import { register } from "../redux/actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
+import Loading from "../components/Loading";
+import ErrorMessage from "../components/ErrorMessage";
 import "./css/Register.css";
 function Register({ navigate }) {
   const [email, setEmail] = useState("");
@@ -24,10 +26,31 @@ function Register({ navigate }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    if (password !== confirmpassword) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (
+      username === "" ||
+      email === "" ||
+      password === "" ||
+      confirmpassword === ""
+    ) {
+      setMessage("Fields cannot be empty");
+    } else if (!regex.test(email)) {
+      setMessage("Email is invalid");
+    } else if (password.length < 5) {
+      setMessage("Password is too short");
+    } else if (role === "") {
+      setMessage("Select Role");
+    } else if (password !== confirmpassword) {
       setMessage("Passwords do not match");
-    } else dispatch(register(username, email, password, role));
+    } else {
+      setMessage("Registered successfully!");
+      dispatch(register(username, email, password, role));
+
+      setTimeout(() => {
+        localStorage.removeItem("userInfo");
+        window.location.href = "/login";
+      }, 1000);
+    }
   };
 
   const handleSelect = (e) => {
@@ -62,12 +85,17 @@ function Register({ navigate }) {
                 <h3 id="regtitle">Register</h3>
 
                 <div className="loginContainer">
+                  {message && (
+                    <ErrorMessage variant="danger">{message}</ErrorMessage>
+                  )}
+                  {loading && <Loading />}
                   <Form onSubmit={submitHandler}>
                     <Form.Group controlId="name">
                       <Form.Label>Name</Form.Label>
                       <Form.Control
                         type="name"
                         value={username}
+                        rules={[{ required: true }]}
                         onChange={(e) => setName(e.target.value)}
                       />
                     </Form.Group>

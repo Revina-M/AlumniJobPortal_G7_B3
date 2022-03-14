@@ -1,7 +1,12 @@
 import { Layout, Menu } from "antd";
-import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  LogoutOutlined,
+  HomeOutlined,
+} from "@ant-design/icons";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Image } from "antd";
 import Filter from "./Filter";
 
@@ -25,6 +30,7 @@ class DefaultLayout extends React.Component {
     navigate = useNavigate();
     navigate("/");
   };
+
   render() {
     const user = JSON.parse(localStorage.getItem("userInfo"));
     return (
