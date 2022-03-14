@@ -7,7 +7,7 @@ import "./css/Profile.css";
 const { TextArea } = Input;
 const { TabPane } = Tabs;
 function Profile() {
-  const [personalInfo, setPersonalInfo] = useState();
+  const [personalInfo, setPersonalInfo] = useState({});
   const [activeTab, setActiveTab] = useState("1");
   const dispatch = useDispatch();
   function onPersonInfoSubmit(values) {

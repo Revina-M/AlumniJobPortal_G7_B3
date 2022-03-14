@@ -5,7 +5,6 @@ const {
   updateUser,
   getAllUsers,
 } = require("../controllers/userControllers");
-const { protect } = require("../models/middlewares/authMiddleware");
 
 const router = express.Router();
 

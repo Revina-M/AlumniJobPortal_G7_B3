@@ -73,7 +73,7 @@ export const editJob = (values) => async (dispatch, getState) => {
     message.success("Job Updated Successfully");
 
     setTimeout(() => {
-      window.location.href = "/editjob";
+      window.location.reload();
     }, 1000);
   } catch (error) {
     console.log(error);
