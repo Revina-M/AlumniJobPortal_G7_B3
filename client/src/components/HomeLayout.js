@@ -38,8 +38,11 @@ class DefaultLayout extends React.Component {
     navigate = useNavigate();
     navigate("/");
   };
-  render() {
+  clear = () => {
     localStorage.removeItem("userInfo");
+  };
+
+  render() {
     return (
       <Layout>
         <Sider
@@ -64,10 +67,14 @@ class DefaultLayout extends React.Component {
             defaultSelectedKeys={[window.location.pathname]}
           >
             <Menu.Item key="/login" icon={<LoginOutlined />}>
-              <Link to="/login">Log In</Link>
+              <Link to="/login" onClick={this.clear}>
+                Log In
+              </Link>
             </Menu.Item>
             <Menu.Item key="/register" icon={<CloudUploadOutlined />}>
-              <Link to="/register">Sign Up</Link>
+              <Link to="/register" onClick={this.clear}>
+                Sign Up
+              </Link>
             </Menu.Item>
           </Menu>
         </Sider>

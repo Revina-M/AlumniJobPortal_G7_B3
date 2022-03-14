@@ -44,9 +44,9 @@ function EditJob() {
               <Row gutter={16}>
                 <Col lg={8} sm={24}>
                   <Form.Item
-                    name="title"
+                    name="Title"
                     rules={[{ required: true }]}
-                    label="title"
+                    label="Title"
                   >
                     <Input />
                   </Form.Item>
