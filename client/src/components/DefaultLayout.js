@@ -3,6 +3,8 @@ import { Ictlogo } from "../assets";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
+  LogoutOutlined,
+  HomeOutlined,
 } from "@ant-design/icons";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -30,6 +32,12 @@ class DefaultLayout extends React.Component {
     navigate("/");
   };
 
+  Gohome = ({ navigate }) => {
+    localStorage.removeItem("userInfo");
+    navigate = useNavigate();
+    navigate("/");
+  };
+
   render() {
     const user = JSON.parse(localStorage.getItem("userInfo"));
     return (
@@ -47,7 +55,18 @@ class DefaultLayout extends React.Component {
             theme="dark"
             mode="inline"
             defaultSelectedKeys={[window.location.pathname]}
-          ></Menu>
+          >
+            <Menu.Item key="/" icon={<HomeOutlined />}>
+              <Link to="/" onClick={this.Gohome}>
+                Home
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/logout" icon={<LogoutOutlined />}>
+              <Link to="/" onClick={this.logout}>
+                Log Out
+              </Link>
+            </Menu.Item>
+          </Menu>
         </Sider>
         <Layout className="site-layout">
           <Header
