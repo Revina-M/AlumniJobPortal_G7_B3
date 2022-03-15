@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Button, Tag } from "antd";
 import moment from "moment";
-import { applyJob } from "../redux/actions/jobActions";
+import { applyJob, deleteJob } from "../redux/actions/jobActions";
 
 function JobInfo() {
   const { id } = useParams();
@@ -21,6 +21,10 @@ function JobInfo() {
 
   function applyNow() {
     dispatch(applyJob(job));
+  }
+
+  function deleteNow() {
+    dispatch(deleteJob(job));
   }
 
   return (
@@ -82,9 +86,14 @@ function JobInfo() {
 
                 <div className="flex justify-content-between">
                   {job.postedBy === userid ? (
-                    <Button>
-                      <Link to={`/editjob/${job._id}`}>Edit Now</Link>
-                    </Button>
+                    <>
+                      <Button>
+                        <Link to={`/editjob/${job._id}`}>Edit Now</Link>
+                      </Button>
+                      <Button className="deleteButton" onClick={deleteNow}>
+                        Delete Now
+                      </Button>
+                    </>
                   ) : alreadyApplied ? (
                     <Tag color="green">Already Applied</Tag>
                   ) : (

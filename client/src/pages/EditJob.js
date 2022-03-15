@@ -44,9 +44,9 @@ function EditJob() {
               <Row gutter={16}>
                 <Col lg={8} sm={24}>
                   <Form.Item
-                    name="Title"
-                    rules={[{ required: true }]}
+                    name="title"
                     label="Title"
+                    rules={[{ required: true }]}
                   >
                     <Input />
                   </Form.Item>
@@ -54,8 +54,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="department"
-                    rules={[{ required: true }]}
                     label="Department"
+                    rules={[{ required: true }]}
                   >
                     <Input />
                   </Form.Item>
@@ -63,8 +63,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="experience"
-                    rules={[{ required: true }]}
                     label="Experience"
+                    rules={[{ required: true }]}
                   >
                     <Input />
                   </Form.Item>
@@ -72,8 +72,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="salaryFrom"
-                    rules={[{ required: true }]}
                     label="Salary From"
+                    rules={[{ required: true }]}
                   >
                     <Input type="number" />
                   </Form.Item>
@@ -81,8 +81,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="salaryTo"
-                    rules={[{ required: true }]}
                     label="Salary To"
+                    rules={[{ required: true }]}
                   >
                     <Input type="number" />
                   </Form.Item>
@@ -92,8 +92,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="skillsRequired"
-                    rules={[{ required: true }]}
                     label="Skills"
+                    rules={[{ required: true }]}
                   >
                     <Input />
                   </Form.Item>
@@ -101,8 +101,8 @@ function EditJob() {
                 <Col lg={8} sm={24}>
                   <Form.Item
                     name="minimumQualification"
-                    rules={[{ required: true }]}
                     label="Minimum Qualification"
+                    rules={[{ required: true }]}
                   >
                     <Select>
                       <Option value="Degree">Degree</Option>
@@ -114,8 +114,8 @@ function EditJob() {
                 <Col lg={24} sm={24}>
                   <Form.Item
                     name="smallDescription"
-                    rules={[{ required: true }]}
                     label="Small Description"
+                    rules={[{ required: true }]}
                   >
                     <TextArea rows={3} />
                   </Form.Item>
@@ -123,8 +123,8 @@ function EditJob() {
                 <Col lg={24} sm={24}>
                   <Form.Item
                     name="fullDescription"
-                    rules={[{ required: true }]}
                     label="Full Description"
+                    rules={[{ required: true }]}
                   >
                     <TextArea rows={3} />
                   </Form.Item>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { message } from "antd";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const getAllJobs = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
@@ -92,6 +93,23 @@ export const applyJob = (job) => async (dispatch, getState) => {
 
     setTimeout(() => {
       window.location.href = "/alumnidashboard";
+    }, 1000);
+  } catch (error) {
+    console.log(error);
+    dispatch({ type: "LOADING", payload: false });
+  }
+};
+
+export const deleteJob = (job) => async (dispatch) => {
+  dispatch({ type: "LOADING", payload: true });
+  console.log("Entered Job Actions");
+  try {
+    console.log("Entered Job Actions try block");
+    await axios.post("/api/jobs/deletejob", job);
+    dispatch({ type: "LOADING", payload: false });
+    message.success("Job Deleted Successfully");
+    setTimeout(() => {
+      window.location.href = "/postjob";
     }, 1000);
   } catch (error) {
     console.log(error);

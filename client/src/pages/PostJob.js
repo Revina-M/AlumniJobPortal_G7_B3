@@ -43,7 +43,7 @@ function PostJob() {
                             <Form.Item
                               name="title"
                               rules={[{ required: true }]}
-                              label="title"
+                              label="Title"
                             >
                               <Input />
                             </Form.Item>

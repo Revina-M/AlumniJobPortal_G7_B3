@@ -69,4 +69,18 @@ const applyJobs = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { getJobs, postJobs, editJobs, applyJobs };
+const deleteJobs = asyncHandler(async (req, res) => {
+  console.log("Entered Router");
+  try {
+    console.log("Entered Router Try block");
+    const job = await Job.findOne({ _id: req.body._id });
+
+    console.log(job);
+    await job.delete();
+    res.send("Job deleted Successfully");
+  } catch (error) {
+    return res.status(400).json({ error });
+  }
+});
+
+module.exports = { getJobs, postJobs, editJobs, applyJobs, deleteJobs };
