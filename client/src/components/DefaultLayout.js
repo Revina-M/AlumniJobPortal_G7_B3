@@ -56,11 +56,6 @@ class DefaultLayout extends React.Component {
             mode="inline"
             defaultSelectedKeys={[window.location.pathname]}
           >
-            <Menu.Item key="/" icon={<HomeOutlined />}>
-              <Link to="/" onClick={this.Gohome}>
-                Home
-              </Link>
-            </Menu.Item>
             <Menu.Item key="/logout" icon={<LogoutOutlined />}>
               <Link to="/" onClick={this.logout}>
                 Log Out
