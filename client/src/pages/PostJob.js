@@ -154,7 +154,7 @@ function PostJob() {
                           <Col lg={8} sm={24}>
                             <Form.Item
                               name="phoneNumber"
-                              label="Phone Name"
+                              label="Phone Number"
                               rules={[{ required: true }]}
                             >
                               <Input />
