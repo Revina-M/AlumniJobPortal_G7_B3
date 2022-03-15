@@ -3,6 +3,7 @@ const User = require("../models/userModel");
 const Job = require("../models/jobModel");
 const generateToken = require("../utils/generateToken");
 
+//To user registration
 const registerUser = asyncHandler(async (req, res) => {
   const { username, email, password, role, isAdmin } = req.body;
   const userExists = await User.findOne({ email });
@@ -35,6 +36,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
+//For user login
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
@@ -53,6 +55,7 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
+//For user profile updation
 const updateUser = asyncHandler(async (req, res) => {
   try {
     await User.findOneAndUpdate({ _id: req.body._id }, req.body);
@@ -63,6 +66,7 @@ const updateUser = asyncHandler(async (req, res) => {
   }
 });
 
+//To get all users
 const getAllUsers = asyncHandler(async (req, res) => {
   try {
     const users = await User.find();

@@ -3,6 +3,7 @@ const User = require("../models/userModel");
 const asyncHandler = require("express-async-handler");
 const moment = require("moment");
 
+//To get all jobs
 const getJobs = asyncHandler(async (req, res) => {
   try {
     const jobs = await Job.find();
@@ -12,6 +13,7 @@ const getJobs = asyncHandler(async (req, res) => {
   }
 });
 
+//To post jobs
 const postJobs = asyncHandler(async (req, res) => {
   try {
     const newjob = new Job(req.body);
@@ -22,6 +24,7 @@ const postJobs = asyncHandler(async (req, res) => {
   }
 });
 
+//To edit job details
 const editJobs = asyncHandler(async (req, res) => {
   try {
     const updatedjob = await Job.findOneAndUpdate(
@@ -34,6 +37,7 @@ const editJobs = asyncHandler(async (req, res) => {
   }
 });
 
+//To apply for a job
 const applyJobs = asyncHandler(async (req, res) => {
   console.log("Entered Handler");
   const { user, job } = req.body;
@@ -69,6 +73,7 @@ const applyJobs = asyncHandler(async (req, res) => {
   }
 });
 
+//To delete job postings
 const deleteJobs = asyncHandler(async (req, res) => {
   console.log("Entered Router");
   try {

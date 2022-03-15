@@ -10,6 +10,7 @@ import {
 import axios from "axios";
 import { message } from "antd";
 
+//For user login
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
@@ -40,6 +41,7 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
+//For user registration
 export const register =
   (username, email, password, role) => async (dispatch) => {
     try {
@@ -71,11 +73,13 @@ export const register =
     }
   };
 
+//For logging out
 export const logout = () => async (dispatch) => {
   localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
 };
 
+//For updating profile
 export const updateUser = (values) => async (dispatch, getState) => {
   try {
     const userid = JSON.parse(localStorage.getItem("userInfo"))._id;
@@ -115,6 +119,7 @@ export const updateUser = (values) => async (dispatch, getState) => {
   }
 };
 
+//To get all users
 export const getAllUsers = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 

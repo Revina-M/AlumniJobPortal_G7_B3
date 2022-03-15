@@ -2,6 +2,7 @@ import axios from "axios";
 import { message } from "antd";
 import { Navigate, useNavigate } from "react-router-dom";
 
+//To get all jobs
 export const getAllJobs = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
@@ -15,6 +16,7 @@ export const getAllJobs = () => async (dispatch) => {
   }
 };
 
+//To post jobs
 export const postJob = (values) => async (dispatch, getState) => {
   try {
     values.postedBy = JSON.parse(localStorage.getItem("userInfo"))._id;
@@ -57,6 +59,7 @@ export const postJob = (values) => async (dispatch, getState) => {
   }
 };
 
+//To edit job details
 export const editJob = (values) => async (dispatch, getState) => {
   dispatch({ type: "LOADING", payload: true });
   const {
@@ -82,6 +85,7 @@ export const editJob = (values) => async (dispatch, getState) => {
   }
 };
 
+//To apply for a job
 export const applyJob = (job) => async (dispatch, getState) => {
   dispatch({ type: "LOADING", payload: true });
   const user = JSON.parse(localStorage.getItem("userInfo"));
@@ -100,6 +104,7 @@ export const applyJob = (job) => async (dispatch, getState) => {
   }
 };
 
+//To delete a job
 export const deleteJob = (job) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
   console.log("Entered Job Actions");
@@ -117,6 +122,7 @@ export const deleteJob = (job) => async (dispatch) => {
   }
 };
 
+//To search for jobs using filter
 export const searchJobs = (searchKey) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
@@ -134,6 +140,7 @@ export const searchJobs = (searchKey) => async (dispatch) => {
   }
 };
 
+//To sort jobs based on filter criteria
 export const sortJobs = (values) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
