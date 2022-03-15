@@ -13,6 +13,8 @@ function JobInfo() {
   const job = jobs.find((job) => job._id === id);
 
   const userid = JSON.parse(localStorage.getItem("userInfo"))._id;
+  const role = JSON.parse(localStorage.getItem("userInfo")).role;
+
   const dispatch = useDispatch();
   const appliedCandidates = job.appliedCandidates;
   const alreadyApplied = appliedCandidates.find(
